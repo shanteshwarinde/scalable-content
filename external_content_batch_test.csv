@@ -1,0 +1,4 @@
+external_id,title,description,category,source
+BATCH-001,  Batch Test One  ,  Batch description one  ,Technology,CSV-BATCH
+BATCH-002,  Batch Test Two  ,  Batch description two  ,News,CSV-BATCH
+BATCH-003,  Batch Test Three  ,  Batch description three  ,Science,CSV-BATCH

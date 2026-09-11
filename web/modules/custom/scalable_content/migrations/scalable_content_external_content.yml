@@ -1,0 +1,31 @@
+id: scalable_content_external_content
+label: 'Import External Content from CSV'
+migration_group: scalable_content
+
+source:
+  plugin: external_content_csv
+  file: /var/www/html/external_content_migrate.csv
+
+process:
+  external_id:
+    plugin: external_content_normalize
+    source: external_id
+
+  title:
+    plugin: external_content_normalize
+    source: title
+
+  description:
+    plugin: external_content_normalize
+    source: description
+
+  category:
+    plugin: external_content_normalize
+    source: category
+
+  source:
+    plugin: external_content_normalize
+    source: source
+
+destination:
+  plugin: 'entity:external_content'

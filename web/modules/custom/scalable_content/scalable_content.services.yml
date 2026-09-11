@@ -1,0 +1,25 @@
+services:
+  plugin.manager.scalable_content_processor:
+    class: Drupal\scalable_content\Plugin\ContentProcessor\ContentProcessorManager
+    arguments:
+      - '@container.namespaces'
+      - '@cache.discovery'
+      - '@module_handler'
+
+  scalable_content.processor:
+    class: Drupal\scalable_content\Service\ContentProcessorService
+    arguments:
+      - '@plugin.manager.scalable_content_processor'
+
+  scalable_content.processor.logging_decorator:
+    class: Drupal\scalable_content\Service\LoggingContentProcessorService
+    decorates: scalable_content.processor
+    arguments:
+      - '@scalable_content.processor.logging_decorator.inner'
+
+  scalable_content.external_content_importer:
+    class: Drupal\scalable_content\Service\ExternalContentImporter
+    arguments:
+      - '@entity_type.manager'
+      - '@scalable_content.processor'
+      - '@queue'

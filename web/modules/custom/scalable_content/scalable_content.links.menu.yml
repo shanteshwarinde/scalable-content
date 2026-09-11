@@ -1,0 +1,6 @@
+scalable_content.settings:
+  title: 'Scalable Content'
+  description: 'Configure scalable content processing.'
+  route_name: scalable_content.settings
+  parent: system.admin_config
+  weight: 100

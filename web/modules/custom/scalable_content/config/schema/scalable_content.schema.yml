@@ -1,0 +1,27 @@
+scalable_content.settings:
+  type: config_object
+  label: 'Scalable Content settings'
+  mapping:
+    source_url:
+      type: string
+      label: 'External source URL'
+
+    batch_size:
+      type: integer
+      label: 'Processing batch size'
+
+    processor:
+      type: string
+      label: 'Content processor plugin'
+
+    enable_processing:
+      type: boolean
+      label: 'Enable processing'
+
+    processor_configuration:
+      type: mapping
+      label: 'Content processor configuration'
+      mapping:
+        trim_strings:
+          type: boolean
+          label: 'Trim string values'

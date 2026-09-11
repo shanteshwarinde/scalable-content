@@ -1,0 +1,4 @@
+external_id,title,description,category,source
+CSV-001,  First CSV Record  ,First description,Technology,CSV
+CSV-002,Second CSV Record,Second description,News,CSV
+CSV-003,  Third CSV Record,Third description,Science,CSV

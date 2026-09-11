@@ -1,0 +1,4 @@
+external_id,title,description,category,source
+QUEUE-001,  Queue Test One  ,Queue description one,Technology,CSV-QUEUE
+QUEUE-002,  Queue Test Two  ,Queue description two,News,CSV-QUEUE
+QUEUE-003,  Queue Test Three  ,Queue description three,Science,CSV-QUEUE

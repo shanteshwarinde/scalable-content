@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Main module file for the Scalable Content module.
+ */
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function scalable_content_external_content_insert(\Drupal\Core\Entity\EntityInterface $entity): void {
+  \Drupal::logger('scalable_content')->info(
+    'External content entity @id was inserted.',
+    [
+      '@id' => $entity->id(),
+    ]
+  );
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function scalable_content_external_content_update(\Drupal\Core\Entity\EntityInterface $entity): void {
+  \Drupal::logger('scalable_content')->info(
+    'External content entity @id was updated.',
+    [
+      '@id' => $entity->id(),
+    ]
+  );
+}

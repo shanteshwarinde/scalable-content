@@ -1,0 +1,12 @@
+name: Scalable Content
+type: module
+description: 'Scalable content import, processing and search platform.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:content_translation
+  - drupal:language
+  - drupal:migrate
+  - drupal:jsonapi
+  - drupal:views
+  - search_api:search_api

@@ -1,0 +1,31 @@
+administer external content:
+  title: 'Administer external content'
+  description: 'Manage External Content configuration and administration.'
+
+view external content:
+  title: 'View external content'
+  description: 'View External Content entities.'
+
+create external content:
+  title: 'Create external content'
+  description: 'Create External Content entities.'
+
+edit external content:
+  title: 'Edit external content'
+  description: 'Edit External Content entities.'
+
+delete external content:
+  title: 'Delete external content'
+  description: 'Delete External Content entities.'
+
+import external content:
+  title: 'Import external content'
+  description: 'Import content from external sources.'
+
+process external content:
+  title: 'Process external content'
+  description: 'Process imported external content.'
+
+access scalable content API:
+  title: 'Access Scalable Content API'
+  description: 'Access the Scalable Content REST API.'

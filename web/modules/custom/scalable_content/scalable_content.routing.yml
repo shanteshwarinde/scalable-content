@@ -1,0 +1,47 @@
+entity.external_content.collection:
+  path: '/admin/content/external-content'
+  defaults:
+    _entity_list: 'external_content'
+    _title: 'External Content'
+  requirements:
+    _permission: 'view external content'
+
+entity.external_content.canonical:
+  path: '/external-content/{external_content}'
+  defaults:
+    _entity_view: 'external_content'
+    _title_callback: '\Drupal\Core\Entity\Controller\EntityController::title'
+  requirements:
+    _entity_access: 'external_content.view'
+
+entity.external_content.add_form:
+  path: '/external-content/add'
+  defaults:
+    _entity_form: 'external_content.add'
+    _title: 'Add External Content'
+  requirements:
+    _entity_create_access: 'external_content'
+
+entity.external_content.edit_form:
+  path: '/external-content/{external_content}/edit'
+  defaults:
+    _entity_form: 'external_content.edit'
+    _title: 'Edit External Content'
+  requirements:
+    _entity_access: 'external_content.update'
+
+entity.external_content.delete_form:
+  path: '/external-content/{external_content}/delete'
+  defaults:
+    _entity_form: 'external_content.delete'
+    _title: 'Delete External Content'
+  requirements:
+    _entity_access: 'external_content.delete'
+
+scalable_content.settings:
+  path: '/admin/config/scalable-content/settings'
+  defaults:
+    _form: '\Drupal\scalable_content\Form\ScalableContentSettingsForm'
+    _title: 'Scalable Content settings'
+  requirements:
+    _permission: 'administer scalable content'

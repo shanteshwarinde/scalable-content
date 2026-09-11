@@ -1,0 +1,4 @@
+external_id,title,description,category,source
+MIG-001,  Migration Test One  ,  Imported through Migrate API  ,Technology,Migration CSV
+MIG-002,  Migration Test Two  ,  Second migration record  ,News,Migration CSV
+MIG-003,  Migration Test Three  ,  Third migration record  ,Science,Migration CSV
