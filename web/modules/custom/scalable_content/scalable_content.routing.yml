@@ -45,3 +45,11 @@ scalable_content.settings:
     _title: 'Scalable Content settings'
   requirements:
     _permission: 'administer scalable content'
+
+scalable_content.render_demo:
+  path: '/scalable-content/render-demo'
+  defaults:
+    _controller: '\Drupal\scalable_content\Controller\RenderDemoController::demo'
+    _title: 'Render API Demo'
+  requirements:
+    _permission: 'administer scalable content'

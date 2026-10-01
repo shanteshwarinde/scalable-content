@@ -15,10 +15,12 @@ use Drupal\search_api\Processor\ProcessorProperty;
  *   label = @Translation("External Content Metadata"),
  *   description = @Translation("Adds a combined category and source value to the search index."),
  *   stages = {
- *     "add_properties" = 0
+ *     "add_properties" = 0,
+ *     "preprocess_index" = 0
  *   }
  * )
  */
+
 class ExternalContentMetadata extends ProcessorPluginBase {
 
   /**

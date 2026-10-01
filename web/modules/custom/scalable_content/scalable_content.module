@@ -1,5 +1,7 @@
 <?php
 
+use Symfony\Component\EventDispatcher\GenericEvent;
+
 /**
  * @file
  * Main module file for the Scalable Content module.
@@ -15,6 +17,11 @@ function scalable_content_external_content_insert(\Drupal\Core\Entity\EntityInte
       '@id' => $entity->id(),
     ]
   );
+
+  \Drupal::service('event_dispatcher')->dispatch(
+    new GenericEvent($entity),
+    'scalable_content.entity_insert'
+  );
 }
 
 /**
@@ -27,4 +34,28 @@ function scalable_content_external_content_update(\Drupal\Core\Entity\EntityInte
       '@id' => $entity->id(),
     ]
   );
+
+  \Drupal::service('event_dispatcher')->dispatch(
+    new GenericEvent($entity),
+    'scalable_content.entity_update'
+  );
 }
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function scalable_content_views_data_alter(array &$data): void {
+  if (isset($data['external_content_field_data']['category'])) {
+    $data['external_content_field_data']['category']['filter']['id'] =
+      'scalable_external_content_category';
+  }
+
+  // Use the custom query plugin for External Content views.
+  if (isset($data['external_content_field_data']['table']['base'])) {
+    $data['external_content_field_data']['table']['base']['query_id'] =
+      'scalable_content_sql';
+  }
+}
+
+
+

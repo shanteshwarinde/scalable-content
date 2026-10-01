@@ -26,6 +26,7 @@ use Drupal\Core\Entity\ContentEntityBase;
  *   handlers = {
  *     "list_builder" = "Drupal\scalable_content\ExternalContentListBuilder",
  *     "access" = "Drupal\scalable_content\ExternalContentAccessControlHandler",
+ *     "views_data" = "Drupal\scalable_content\ExternalContentViewsData",
  *     "form" = {
  *       "add" = "Drupal\scalable_content\Form\ExternalContentForm",
  *       "edit" = "Drupal\scalable_content\Form\ExternalContentForm",

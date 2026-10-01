@@ -23,3 +23,10 @@ services:
       - '@entity_type.manager'
       - '@scalable_content.processor'
       - '@queue'
+
+  scalable_content.event_subscriber:
+    class: Drupal\scalable_content\EventSubscriber\ExternalContentEventSubscriber
+    arguments:
+      - '@logger.channel.default'
+    tags:
+      - { name: event_subscriber }
